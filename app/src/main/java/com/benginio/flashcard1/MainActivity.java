@@ -26,12 +26,22 @@ private ImageView addQuestionImageView;
         tvFlashcardQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvFlashcardAnswer.setVisibility(view.INVISIBLE);
+                tvFlashcardQuestion.setVisibility(view.INVISIBLE);
                 tvFlashcardAnswer.setVisibility(view.VISIBLE);
                 Log.i("Benginio", "entered onCLick method");
 
                 Toast.makeText(MainActivity.this, "I CLICKED THE QUESTION!", Toast.LENGTH_SHORT).show();
 
+            }
+        });
+        tvFlashcardAnswer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvFlashcardAnswer.setVisibility(view.INVISIBLE);
+                tvFlashcardQuestion.setVisibility(view.VISIBLE);
+                Log.i("Benginio", "entered onCLick method");
+
+                Toast.makeText(MainActivity.this, "I CLICKED THE ANSWER!", Toast.LENGTH_SHORT).show();
             }
         });
          addQuestionImageView=findViewById(R.id.flashcard_add_question_button);
